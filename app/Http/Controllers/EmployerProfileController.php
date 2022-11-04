@@ -22,12 +22,24 @@ class EmployerProfileController extends Controller
             'cname' => 'required',
             'location' => 'required',
             'cnum' => 'required',
+            'description' => 'required',
+            'benefits' => 'required',
+            'workhours' => 'required',
+            'comsize' => 'required',
+            'worksetup' => 'required',
+            'dcode' => 'required',
         ]);
         EmployerProfile::create([
             'user_id' =>Auth::user()->id,
             'cname' => request('cname'),
             'location' => request('location'),
             'cnum' => request('cnum'),
+            'description' => request('description'),
+            'benefits' => request('benefits'),
+            'workhours' => request('workhours'),
+            'comsize' => request('comsize'),
+            'worksetup' => request('worksetup'),
+            'dcode' => request('dcode'),
         ]);
         return redirect()->back()->with('message', 'Updated Successfully');
     }
@@ -43,6 +55,12 @@ class EmployerProfileController extends Controller
             'cname' => request('cname'),
             'location' => request('location'),
             'cnum' => request('cnum'),
+            'description' => request('description'),
+            'benefits' => request('benefits'),
+            'workhours' => request('workhours'),
+            'comsize' => request('comsize'),
+            'worksetup' => request('worksetup'),
+            'dcode' => request('dcode'),
         ]);
 
         return redirect()->back()->with('message', 'Updated Successfully');

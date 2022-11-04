@@ -19,32 +19,29 @@
                 <label for="cnum" >Number:</label>
                 <input type="text" class="form-control" name="cnum" value="{{Auth::user()->employerprofile->cnum}}">
                 <br>
-                <label for="">Company Description</label>
-                <textarea class="form-control" name="" id=""></textarea>
+                <label for="description">Company Description</label>
+                <textarea class="form-control" name="description" value="{{Auth::user()->employerprofile->description}}"></textarea>
                 <br>
                 <label for="">Company Logo</label><br>
                 <input type="file" class="form-control" name="" id="">
                 <br>
                 <hr>
                 <h3>Additional Information</h3>
-                <label for="" >Benefits:</label>
-                <input type="text" class="form-control" name="">
+                <label for="benefits" >Benefits:</label>
+                <input type="text" class="form-control" name="benefits" value="{{Auth::user()->employerprofile->benefits}}">
                 <br>
-                <label for="" >Work Hours:</label>
-                <input type="text" class="form-control" name="">
+                <label for="workhours" >Work Hours:</label>
+                <input type="text" class="form-control" name="workhours" value="{{Auth::user()->employerprofile->workhours}}">
                 <br>
-                <label for="" >Work-setup:</label>
-                <input type="text" class="form-control" name="">
+                <label for="worksetup" >Work Setup:</label>
+                <input type="text" class="form-control" name="worksetup" value="{{Auth::user()->employerprofile->worksetup}}">
                 <br>
-                <label for="" >Company size:</label>
-                <input type="text" class="form-control" name="">
+                <label for="comsize" >Company size:</label>
+                <input type="text" class="form-control" name="comsize" value="{{Auth::user()->employerprofile->comsize}}">
                 <br>
-                <label for="" >Dress code:</label>
-                <input type="text" class="form-control" name="">
+                <label for="dcode" >Dress code:</label>
+                <input type="text" class="form-control" name="dcode" value="{{Auth::user()->employerprofile->dcode}}">
                 <br>
-            </div>
-            <div class="col-md-6">
-                
             </div>
         </div>
         
