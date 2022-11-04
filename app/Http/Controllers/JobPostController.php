@@ -15,9 +15,13 @@ class JobPostController extends Controller
      */
     public function index()
     {
-        //$jobPosts = JobPosts::all();
-        $jobPosts = JobPosts::orderBy('id', 'desc');
+        $jobPosts = JobPosts::all();
         return view('jobPost.index')->with('jobPosts', $jobPosts);
+        // $jobPosts = JobPosts::orderBy('id', 'desc')->simplePaginate(1);
+        return view('jobPost.index')->with('jobPosts', $jobPosts);
+        
+        // $jobPosts = JobPosts::orderBy('id', 'desc');
+        // return view('jobPost.index')->with('jobPosts', $jobPosts);
     }
 
     /**

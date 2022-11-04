@@ -43,6 +43,8 @@ Route::get('edit/{id}',['EmployerProfileController::class, edit']);
 
 
 //Job Posts
-Route::resource('job_posts', 'App\Http\Controllers\JobPostController');
-Route::get('create', 'App\Http\Controllers\JobPostController@create');
-Route::get('jobpost', 'App\Http\Controllers\JobPostController@index');
+// Route::resource('job_posts', 'App\Http\Controllers\JobPostController');
+// Route::get('create', 'App\Http\Controllers\JobPostController@create');
+// Route::get('jobpost', 'App\Http\Controllers\JobPostController@index');
+
+Route::resource('jobPosts', 'App\Http\Controllers\JobPostController');

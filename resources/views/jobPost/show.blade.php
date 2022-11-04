@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>{{$jobPost->job_id}}</h1>
-<h1>{{$jobPost->job_title}}</h1>
+{{-- <h1>{{$jobPost->job_id}}</h1> --}}
+<h1>{{$jobPosts->job_title}}</h1>
    <hr>
    <div class="card p-5">
         <p><b>Company Number:{{$jobPost->cnum}}</b></p>
@@ -15,6 +15,7 @@
             {!! csrf_field() !!}
             <input class="btn btn-danger w-100" type="submit" value="delete">
          </form>
+         {{$jobPost->job_location}}
 
    </div>
     
