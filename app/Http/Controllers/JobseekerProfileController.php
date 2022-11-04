@@ -32,6 +32,14 @@ class JobseekerProfileController extends Controller
             'address' => request('address'),
             'bday' => request('bday'),
             'number' => request('number'),
+            'bio' => request('bio'),
+            'emphistory' => request('emphistory'),
+            'educ' => request('educ'),
+            'addinfo' => request('addinfo'),
+            'cert' => request('cert'),
+            'language' => request('language'),
+            'skills' => request('skills'),
+            
         ]);
         return redirect()->back()->with('message', 'Updated Successfully');
 
@@ -46,6 +54,7 @@ class JobseekerProfileController extends Controller
             'address' => 'required',
             'bday' => 'required',
             'number' => 'required',
+            
         ]);
         $user_id = auth()->user()->id;
         JobseekerProfile::where('user_id', $user_id)->update([
@@ -54,6 +63,13 @@ class JobseekerProfileController extends Controller
             'address' => request('address'),
             'bday' => request('bday'),
             'number' => request('number'),
+            'bio' => request('bio'),
+            'emphistory' => request('emphistory'),
+            'educ' => request('educ'),
+            'addinfo' => request('addinfo'),
+            'cert' => request('cert'),
+            'language' => request('language'),
+            'skills' => request('skills'),
         ]);
 
         return redirect()->back()->with('message', 'Updated Successfully');

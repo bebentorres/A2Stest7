@@ -19,30 +19,49 @@
                             <h4>{{Auth::user()->jobseekerprofile->bday}}</h4>
                         @endif
                         <hr>
-                        <p class="p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo illum, quas nam, consequatur facere atque, minus fuga quibusdam earum ipsam placeat error obcaecati! Laborum perspiciatis autem placeat iste reprehenderit porro.</p>
+                        @if (empty(Auth::user()->jobseekerprofile->bio))
+                            <p>bio yet to be updated</p>
+                        @else
+                            <p class="p-3">{{Auth::user()->jobseekerprofile->bio}}</p>
+                        @endif
+                        
                         <hr>
                         
                     </div>
                     <div class="card-body">
                         <h3 class="p-3">Employment History</h3>
                         <br>
-                        <div class="p-3">
-                            <h4>Project Manager</h4>
-                            <p>Manage overall activities, members and progress of ongoing projects.</p>
-                        </div>
-                        <div class="p-3">
-                            <h4>Graphic Designer</h4>
-                            <p>Plans and designs brand assets that is in line with the core values of the company.</p>
-                        </div>
+                        @if (empty(Auth::user()->jobseekerprofile->emphistory))
+                            <div class="p-3">
+                                <h5>yet to be updated</h5>
+                            </div>
+                        @else
+                            <div class="p-3">
+                                <h5>{{Auth::user()->jobseekerprofile->emphistory}}</h5>
+                            </div>
+                        @endif
                         <hr>
                         <h3 class="p-3">Educational Background</h3>
                         <br>
-                        <div class="p-3">
-                            <h4>Bachelor of Science in Industrial Engineering</h4>
-                        </div>
+                        @if (empty(Auth::user()->jobseekerprofile->educ))
+                            <div class="p-3">
+                                <h5>yet to be updated</h5>
+                            </div>
+                        @else
+                            <div class="p-3">
+                                <h5>{{Auth::user()->jobseekerprofile->educ}}</h5>
+                            </div>
+                        @endif
                         <hr>
+                        @if (empty(Auth::user()->jobseekerprofile->educ))
+                        @else
                         <h3 class="p-3">Additional Information</h3>
+                            <div class="p-3">
+                                <h5>{{Auth::user()->jobseekerprofile->addinfo}}</h5>
+                            </div>
+                        @endif
                         <br>
+                        
                     </div>
                 </div>
             </div>
@@ -50,11 +69,19 @@
                 <div class="card p-3 mb-2">
                     <div>
                         <h4>Address</h4>
-                        <p>Makati City</p>
+                        @if (empty(Auth::user()->jobseekerprofile->address))
+                        <p>yet to be updated</p>
+                        @else
+                        <p class="p-3">{{Auth::user()->jobseekerprofile->address}}</p>
+                        @endif
                     </div>
                     <div>
                         <h4>Contact Number</h4>
-                        <p>0912-345-6789</p>
+                        @if (empty(Auth::user()->jobseekerprofile->number))
+                        <p>yet to be updated</p>
+                        @else
+                        <p class="p-3">{{Auth::user()->jobseekerprofile->number}}</p>
+                        @endif
                     </div>
                     <div>
                         <h4>Resume</h4>
@@ -63,29 +90,37 @@
                     <br>
                     <div>
                         <h4>Certification</h4>
-                        <p>N/A</p>
+                        @if (empty(Auth::user()->jobseekerprofile->cert))
+                        <p>yet to be updated</p>
+                        @else
+                        <p class="p-3">{{Auth::user()->jobseekerprofile->cert}}</p>
+                        @endif
                     </div>
                     <div>
                         <h4>Languange</h4>
-                        <p>Filipino <br>English</p>
-                    </div>
-                    <div>
-                        <h4>Work Availability</h4>
-                        <p>I can start as soon as possible</p>
+                        @if (empty(Auth::user()->jobseekerprofile->language))
+                        <p>yet to be updated</p>
+                        @else
+                        <p class="p-3">{{Auth::user()->jobseekerprofile->language}}</p>
+                        @endif
                     </div>
                     <div>
                         <h4>Skills</h4>
-                        <p>Graphic Designing <br>Project Management</p>
+                        @if (empty(Auth::user()->jobseekerprofile->skills))
+                        <p>yet to be updated</p>
+                        @else
+                        <p class="p-3">{{Auth::user()->jobseekerprofile->skills}}</p>
+                        @endif
                     </div>
                 </div>
                 <div class="card p-3 mb-2">
                     <div>
                         <a href="" class="btn btn-primary form-control mb-2">View Applied Jobs</a>
-                        <a href=""class="btn btn-secondary form-control mb-2">Saved Jobs</a>
+                        <a href=""class="btn btn-outline-primary form-control mb-2">Saved Jobs</a>
                         @if(empty(Auth::user()->jobseekerprofile->lname))
-                            <a href="/jobseeker/editprofile" class="btn btn-secondary form-control">Edit Profile</a>
+                            <a href="/jobseeker/editprofile" class="btn btn-outline-primary form-control">Edit Profile</a>
                         @else
-                            <a href="/jobseeker/editprofile/update" class="btn btn-secondary form-control">Update Profile</a>
+                            <a href="/jobseeker/editprofile/update" class="btn btn-outline-primary form-control">Update Profile</a>
                         @endif
                     </div>
                 </div>
