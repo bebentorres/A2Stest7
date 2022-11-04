@@ -45,7 +45,7 @@
             </div>
         </div>
         
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-success">
             {{ __('Submit') }}
         </button>
     

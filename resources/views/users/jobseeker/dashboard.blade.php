@@ -115,12 +115,12 @@
                 </div>
                 <div class="card p-3 mb-2">
                     <div>
-                        <a href="" class="btn btn-primary form-control mb-2">View Applied Jobs</a>
-                        <a href=""class="btn btn-outline-primary form-control mb-2">Saved Jobs</a>
+                        <a href="" class="btn btn-success form-control mb-2">View Applied Jobs</a>
+                        <a href=""class="btn btn-outline-success form-control mb-2">Saved Jobs</a>
                         @if(empty(Auth::user()->jobseekerprofile->lname))
-                            <a href="/jobseeker/editprofile" class="btn btn-outline-primary form-control">Edit Profile</a>
+                            <a href="/jobseeker/editprofile" class="btn btn-outline-success form-control">Edit Profile</a>
                         @else
-                            <a href="/jobseeker/editprofile/update" class="btn btn-outline-primary form-control">Update Profile</a>
+                            <a href="/jobseeker/editprofile/update" class="btn btn-outline-success form-control">Update Profile</a>
                         @endif
                     </div>
                 </div>

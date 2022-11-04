@@ -42,3 +42,6 @@ Route::post('/employer/editprofile/update' ,'App\Http\Controllers\EmployerProfil
 
 // Post
 Route::view('/employer/createpost', 'users.employer.createjob')->name('employer.create');
+
+// Search page
+Route::view('/search', 'search');

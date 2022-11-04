@@ -28,7 +28,7 @@
                 <label for="">Additional Information:</label><br>
                 <textarea class="form-control" name="" id=""></textarea>
                 <br>
-                <button type="submit" class="btn btn-primary form-control">
+                <button type="submit" class="btn btn-success form-control">
                     {{ __('Post') }}
                 </button>
                 <br>

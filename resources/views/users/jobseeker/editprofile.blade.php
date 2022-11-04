@@ -46,7 +46,7 @@
         <label for="addinfo">Additional Information:</label>
         <textarea style="100%" class="form-control" rows="5"name="addinfo"></textarea>
         <br>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-success">
             {{ __('Submit') }}
         </button>
     

@@ -92,12 +92,12 @@
                     </div>
                     <div class="card-footer text-center">
                         @if(empty(Auth::user()->employerprofile->cname))
-                            <a href="/employer/editprofile" class="btn btn-outline-primary form-control mb-2">Edit Profile</a>
+                            <a href="/employer/editprofile" class="btn btn-outline-success form-control mb-2">Edit Profile</a>
                         @else
-                            <a href="/employer/editprofile/update" class="btn btn-outline-primary form-control mb-2">Update Profile</a>
+                            <a href="/employer/editprofile/update" class="btn btn-outline-success form-control mb-2">Update Profile</a>
                         @endif
                         <br>
-                        <a href="/employer/createpost" class="btn btn-primary form-control">Create Job Post</a>
+                        <a href="/employer/createpost" class="btn btn-success form-control">Create Job Post</a>
                     </div>
                 </div>
                 <div class="card" >

@@ -8,7 +8,7 @@
         <h2>Profile Update</h2>
     <form action="/jobseeker/editprofile/update" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
-        <input type="text" value="{{Auth::user()->jobseekerprofile->id}}" name="user_id">
+        {{-- <input type="text" value="{{Auth::user()->jobseekerprofile->id}}" name="user_id"> --}}
         <br>
         <label for="fname" >First Name:</label>
         <input type="text" class="form-control" name="fname" value="{{Auth::user()->jobseekerprofile->fname}}">
@@ -46,7 +46,7 @@
         <label for="addinfo">Additional Information:</label>
         <textarea style="100%" class="form-control" rows="5"name="addinfo" value="{{Auth::user()->jobseekerprofile->addinfo}}"></textarea>
         <br>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-success">
             {{ __('Submit') }}
         </button>
     
