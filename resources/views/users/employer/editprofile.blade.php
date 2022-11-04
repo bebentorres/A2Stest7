@@ -5,7 +5,7 @@
 <div class="container">
     <form action="{{route('employer.store')}}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
-        <input type="text" value="{{Auth::user()->id}}" name="user_id">
+        <input type="text" value="{{Auth::user()->id}}" name="user_id" hidden>
         <br>
         <label for="cname" >Company Name</label>
         <input type="text" class="form-control" name="cname">
