@@ -33,3 +33,15 @@ Route::post('/jobseeker/editprofile/update' ,'App\Http\Controllers\JobseekerProf
 Route::get('/employer' ,'App\Http\Controllers\EmployerProfileController@index');
 Route::get('/employer/editprofile' ,'App\Http\Controllers\EmployerProfileController@edit');
 Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfileController@editprofile')->name('employer.store');
+
+// Pages
+Route::get('/', 'App\Http\Controllers\PagesController@index');
+Route::get('/about', 'App\Http\Controllers\PagesController@about');
+Route::get('/search', 'App\Http\Controllers\PagesController@search');
+Route::get('/jobPost', 'App\Http\Controllers\PagesController@jobPost');
+Route::get('/apply', 'App\Http\Controllers\PagesController@apply');
+Route::get('/talents', 'App\Http\Controllers\PagesController@talents');
+Route::get('/companyOverview', 'App\Http\Controllers\PagesController@companyOverview');
+Route::get('/companyProfile', 'App\Http\Controllers\PagesController@companyProfile');
+Route::get('/signup', 'App\Http\Controllers\PagesController@signup');
+Route::get('/jobs', 'App\Http\Controllers\PagesController@jobs');
