@@ -2,7 +2,7 @@
 
 @section('content')
 <h1>Edit Job Post</h1>
-<form action="/contacts/{{$contact->job_id}}" method="post">
+<form action="/jobPosts/{{$jobPost->job_id}}" method="post">
    {!! csrf_field() !!}
    {{-- cross site request forgery - helps secure data  --}}
    @method("PATCH")

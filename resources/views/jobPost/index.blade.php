@@ -4,6 +4,7 @@
 <h1>Job Posts</h1>
 <hr>
 <br>
+<a class="btn btn-sm btn-primary" href="jobPosts/create">Create New Job Post</a>
 @foreach ($jobPosts as $item)
 <div class="card p-5">
     <h2>{{$item->job_id}}</h2>

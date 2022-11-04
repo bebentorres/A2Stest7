@@ -44,7 +44,7 @@ class JobPostController extends Controller
     {
         $input = $request->all();
         JobPosts::create($input);
-        return redirect('jobPost');
+        return redirect('jobPosts');
     }
 
     /**
@@ -93,8 +93,9 @@ class JobPostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($job_id)
     {
-        //
+        JobPosts::destroy($job_id);
+        return redirect('jobPosts');
     }
 }

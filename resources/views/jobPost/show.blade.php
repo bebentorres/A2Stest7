@@ -8,9 +8,9 @@
         <p><b>Company Number:{{$jobPost->cnum}}</b></p>
         <p><b>Job Description: {{$jobPost->job_description}}</b></p>
         <p><b>Job Salary: {{$jobPost->job_salary}}</b></p>
-        <a href="/jobpost/{{$jobPost->job_id}}/edit" class="btn btn-lg btn-primary">Edit</a>
+        <a href="/jobPosts/{{$jobPost->job_id}}/edit" class="btn btn-lg btn-primary">Edit</a>
         <br>
-        <form action="/jobpost/{{$jobPost->job_id}}" method="post">
+        <form action="/jobPosts/{{$jobPost->job_id}}" method="post">
             {{method_field('DELETE')}}
             {!! csrf_field() !!}
             <input class="btn btn-danger w-100" type="submit" value="delete">
