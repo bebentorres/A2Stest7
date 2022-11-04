@@ -66,7 +66,7 @@
                         @if(empty(Auth::user()->employerprofile->cname))
                             <a href="/employer/editprofile" class="btn btn-secondary form-control mb-2">edit profile</a>
                         @else
-                            <a href="/employer/editprofile" class="btn btn-secondary form-control mb-2">update profile</a>
+                            <a href="/employer/editprofile/update" class="btn btn-secondary form-control mb-2">update profile</a>
                         @endif
                         <br>
                         <a href="/employer/createpost" class="btn btn-primary form-control">Create Job Post</a>

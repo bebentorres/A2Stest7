@@ -32,25 +32,25 @@ class EmployerProfileController extends Controller
         return redirect()->back()->with('message', 'Updated Successfully');
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request){
         $this->validate($request,[
             'cname' => 'required',
             'location' => 'required',
             'cnum' => 'required',
         ]);
         $user_id = auth()->user()->id;
-        EmployerProfile::where('user_id', '==', $user_id)->update([
+        EmployerProfile::where('user_id', $user_id)->update([
             'cname' => request('cname'),
             'location' => request('location'),
             'cnum' => request('cnum'),
         ]);
 
-        // $emp = EmployerProfile::find($id);
-        // $emp->cname = $request->get('cname');
-        // $emp->location = $request->get('location');
-        // $emp->cnum = $request->get('cnum');
-        // $emp->save();
-
         return redirect()->back()->with('message', 'Updated Successfully');
+
+        
+    }
+
+    public function up(){
+        return view('users.employer.update');
     }
 }

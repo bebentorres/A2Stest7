@@ -3,21 +3,21 @@
 @section('content')
 
 <div class="container">
-    <form action="{{route('employer.store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('employer.update')}}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <div class="row">
             <div class="col-md-6">
                 <h2>Update Company Information</h2>
-                <input type="text" hidden value="{{Auth::user()->id}}" name="user_id">
+                <input type="text" hidden value="{{Auth::user()->employerprofile->id}}" name="user_id">
                 <br>
                 <label for="cname" >Company Name</label>
-                <input type="text" class="form-control" name="cname">
+                <input type="text" class="form-control" name="cname" value="{{Auth::user()->employerprofile->cname}}">
                 <br>
                 <label for="location" >Location:</label>
-                <input type="text" class="form-control" name="location">
+                <input type="text" class="form-control" name="location" value="{{Auth::user()->employerprofile->location}}">
                 <br>
                 <label for="cnum" >Number:</label>
-                <input type="text" class="form-control" name="cnum">
+                <input type="text" class="form-control" name="cnum" value="{{Auth::user()->employerprofile->cnum}}">
                 <br>
                 <label for="">Company Description</label>
                 <textarea class="form-control" name="" id=""></textarea>

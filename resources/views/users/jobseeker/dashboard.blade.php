@@ -85,7 +85,7 @@
                         @if(empty(Auth::user()->jobseekerprofile->lname))
                             <a href="/jobseeker/editprofile" class="btn btn-secondary form-control">Edit Profile</a>
                         @else
-                            <a href="/jobseeker/updateprofile" class="btn btn-secondary form-control">Update Profile</a>
+                            <a href="/jobseeker/editprofile/update" class="btn btn-secondary form-control">Update Profile</a>
                         @endif
                     </div>
                 </div>
