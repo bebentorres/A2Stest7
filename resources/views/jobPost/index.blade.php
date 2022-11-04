@@ -12,16 +12,18 @@
     <p>Job Description: {{$item->job_description}}</p>
     <p>Salary: {{$item->job_salary}}</p>
     <p>Location: {{$item->job_location}}</p>
-    {{-- <p>Job Setup: {{$item->job_setup}}</p>
+    <p>Job Setup: {{$item->job_setup}}</p>
     <p>Date Posted: {{$item->job_post_date}}</p>
     <p>Job Type: {{$item->job_type}}</p>
-    <p>Experience required: {{$item->exp_leve}}</p> --}}
+    <p>Experience required: {{$item->exp_leve}}</p>
   </div>   
-  <a class="btn btn-success" href="/jobPosts/{{$item->id}}">Click here for more information</a>
+  <a class="btn btn-success" href="/jobPosts/{{$item->job_id}}">Click here for more information</a>
   <hr>
   <br>
+  <div>
+  {!! $jobPosts->links() !!}
+  </div>
   @endforeach 
   
-  {{-- {{$jobPosts->links()}} --}}
 @endsection
 

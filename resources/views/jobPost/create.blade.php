@@ -7,9 +7,9 @@
         <hr>
         <form action="/job_posts/" method="post">
         {!! csrf_field() !!}
-        <label style="font-weight: bold">Job ID</label>
-        <input class="form-control" type="text" name="job_id" disabled>
-        <br>
+        {{-- <label style="font-weight: bold">Job ID</label>
+        <input class="form-control" type="text" name="job_id">
+        <br> --}}
         <label style="font-weight: bold">Job Title</label>
         <input class="form-control" type="text" name="job_title">
         <br>

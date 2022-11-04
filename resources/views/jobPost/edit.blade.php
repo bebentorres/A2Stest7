@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Edit Form</h1>
-<form action="/contacts/{{$contact->id}}" method="post">
+<h1>Edit Job Post</h1>
+<form action="/contacts/{{$contact->job_id}}" method="post">
    {!! csrf_field() !!}
    {{-- cross site request forgery - helps secure data  --}}
    @method("PATCH")
    {{-- PUT if whole resource needs to be updated, PATCH if only a portion is to be updated --}}
-   <input class="form-control" type="hidden" name="job_id" value="{{$jobPost->id}}">
+   <input class="form-control" type="hidden" name="job_id" value="{{$jobPost->job_id}}">
    <br>
    <label for="">Job Title:</label>
    <input class="form-control" type="text" name="job_title" value="{{$jobPost->job_title}}">

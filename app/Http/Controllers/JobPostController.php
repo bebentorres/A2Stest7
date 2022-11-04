@@ -16,9 +16,9 @@ class JobPostController extends Controller
     public function index()
     {
         $jobPosts = JobPosts::all();
+        $jobPosts = JobPosts::orderBy('job_id', 'asc')->simplePaginate(1);
         return view('jobPost.index')->with('jobPosts', $jobPosts);
-        // $jobPosts = JobPosts::orderBy('id', 'desc')->simplePaginate(1);
-        return view('jobPost.index')->with('jobPosts', $jobPosts);
+        // return view('jobPost.index')->with('jobPosts', $jobPosts);
         
         // $jobPosts = JobPosts::orderBy('id', 'desc');
         // return view('jobPost.index')->with('jobPosts', $jobPosts);
@@ -53,9 +53,9 @@ class JobPostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($job_id)
     {
-        $singleJobPost = JobPosts::find($id);
+        $singleJobPost = JobPosts::find($job_id);
         return view('jobPost.show')->with('jobPost', $singleJobPost);
     }
 
@@ -65,9 +65,9 @@ class JobPostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($job_id)
     {
-        $updateJobPost = JobPosts::find($id);
+        $updateJobPost = JobPosts::find($job_id);
         return view('jobPost.edit')->with('jobPost', $updateJobPost);
     }
 
@@ -78,13 +78,13 @@ class JobPostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $job_id)
     {
-        $updateJobPost = JobPosts::find($id);
+        $updateJobPost = JobPosts::find($job_id);
         $input = $request->all();
         $updateJobPost->update($input);
 
-        return redirect('jobPost');
+        return redirect('jobPosts');
     }
 
     /**

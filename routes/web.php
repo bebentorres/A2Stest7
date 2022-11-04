@@ -39,7 +39,7 @@ Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfile
 //Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfileController@store');
 
 //added route
-Route::get('edit/{id}',['EmployerProfileController::class, edit']);
+Route::get('edit/{job_id}',['EmployerProfileController::class, edit']);
 
 
 //Job Posts
