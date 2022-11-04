@@ -3,19 +3,51 @@
 @section('content')
 
 <div class="container">
-    <form action="{{route('employer.update')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('employer.store')}}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
-        <input type="text" value="{{Auth::user()->id}}" name="user_id">
-        <br>
-        <label for="cname" >Company Name</label>
-        <input type="text" class="form-control" name="cname">
-        <br>
-        <label for="location" >Location:</label>
-        <input type="text" class="form-control" name="location">
-        <br>
-        <label for="cnum" >Number:</label>
-        <input type="text" class="form-control" name="cnum">
-        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Update Company Information</h2>
+                <input type="text" hidden value="{{Auth::user()->id}}" name="user_id">
+                <br>
+                <label for="cname" >Company Name</label>
+                <input type="text" class="form-control" name="cname">
+                <br>
+                <label for="location" >Location:</label>
+                <input type="text" class="form-control" name="location">
+                <br>
+                <label for="cnum" >Number:</label>
+                <input type="text" class="form-control" name="cnum">
+                <br>
+                <label for="">Company Description</label>
+                <textarea class="form-control" name="" id=""></textarea>
+                <br>
+                <label for="">Company Logo</label><br>
+                <input type="file" class="form-control" name="" id="">
+                <br>
+                <hr>
+                <h3>Additional Information</h3>
+                <label for="" >Benefits:</label>
+                <input type="text" class="form-control" name="">
+                <br>
+                <label for="" >Work Hours:</label>
+                <input type="text" class="form-control" name="">
+                <br>
+                <label for="" >Work-setup:</label>
+                <input type="text" class="form-control" name="">
+                <br>
+                <label for="" >Company size:</label>
+                <input type="text" class="form-control" name="">
+                <br>
+                <label for="" >Dress code:</label>
+                <input type="text" class="form-control" name="">
+                <br>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+        
         <button type="submit" class="btn btn-primary">
             {{ __('Submit') }}
         </button>

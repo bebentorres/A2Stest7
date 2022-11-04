@@ -15,7 +15,7 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes();
@@ -33,3 +33,5 @@ Route::post('/jobseeker/editprofile/update' ,'App\Http\Controllers\JobseekerProf
 Route::get('/employer' ,'App\Http\Controllers\EmployerProfileController@index');
 Route::get('/employer/editprofile' ,'App\Http\Controllers\EmployerProfileController@edit');
 Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfileController@editprofile')->name('employer.store');
+
+Route::view('/employer/createpost', 'users.employer.createjob')->name('employer.create');
