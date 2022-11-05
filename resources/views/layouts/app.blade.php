@@ -15,7 +15,9 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="{{asset('build/assets/app.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <script src="{{asset('build/assets/app.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div id="app">

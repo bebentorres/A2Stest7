@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Models\EmployerProfile;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +34,7 @@ Route::get('/jobseeker/editprofile/update', 'App\Http\Controllers\JobseekerProfi
 Route::post('/jobseeker/editprofile/update' ,'App\Http\Controllers\JobseekerProfileController@update')->name('jobseeker.update');
 
 
+
 // Employer
 Route::get('/employer' ,'App\Http\Controllers\EmployerProfileController@index');
 Route::get('/employer/editprofile' ,'App\Http\Controllers\EmployerProfileController@edit');
@@ -40,8 +44,20 @@ Route::get('/employer/editprofile/update', 'App\Http\Controllers\EmployerProfile
 Route::post('/employer/editprofile/update' ,'App\Http\Controllers\EmployerProfileController@update')->name('employer.update');
 
 
+//Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfileController@store');
+
+
 // Post
 Route::view('/employer/createpost', 'users.employer.createjob')->name('employer.create');
 
+
+
 // Search page
 Route::view('/search', 'search');
+
+
+Route::resource('jobPosts', 'App\Http\Controllers\JobPostController');
+=======
+// Search page
+Route::view('/search', 'search');
+
