@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
 
 <div class="card p-5">
         <h1>Create New Job Post</h1>
@@ -10,6 +14,7 @@
         {{-- <label style="font-weight: bold">Job ID</label>
         <input class="form-control" type="text" name="job_id">
         <br> --}}
+        <input type="text" name="employer_id" hidden value="{{Auth::user()->id}}">
         <label style="font-weight: bold">Job Title</label>
         <input class="form-control" type="text" name="job_title">
         <br>
@@ -42,5 +47,8 @@
         <input type="submit" class="btn btn-primary w-100"  value="Create Job Post">
     </form>
     </div>
+</div>
+</div>
+</div>
     
 @endsection

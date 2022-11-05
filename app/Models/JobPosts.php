@@ -20,5 +20,6 @@ class JobPosts extends Model
                             'job_post_date',
                             'job_type',
                             'exp_level',
+                            'employer_id',
                             ];
 }

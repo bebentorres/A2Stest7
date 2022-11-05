@@ -15,4 +15,9 @@ class EmployerProfile extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function jobposts()
+    {
+        return $this->hasMany(JobPosts::class);
+    }
 }

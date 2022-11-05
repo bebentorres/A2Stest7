@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+
 <h1>Edit Job Post</h1>
 <form action="/jobPosts/{{$jobPost->job_id}}" method="post">
    {!! csrf_field() !!}
@@ -24,5 +30,8 @@
    <input class="btn btn-primary w-100" type="submit" value="Edit Job Post">
 
 </form>
+</div>
+</div>
+</div>
 </div>
 @endsection
