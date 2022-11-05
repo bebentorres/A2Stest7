@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes();
@@ -43,10 +43,13 @@ Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfile
 Route::get('/employer/editprofile/update', 'App\Http\Controllers\EmployerProfileController@up' );
 Route::post('/employer/editprofile/update' ,'App\Http\Controllers\EmployerProfileController@update')->name('employer.update');
 
+
 //Route::post('/employer/editprofile/store' ,'App\Http\Controllers\EmployerProfileController@store');
+
 
 // Post
 Route::view('/employer/createpost', 'users.employer.createjob')->name('employer.create');
+
 
 
 // Search page
@@ -54,3 +57,7 @@ Route::view('/search', 'search');
 
 
 Route::resource('jobPosts', 'App\Http\Controllers\JobPostController');
+=======
+// Search page
+Route::view('/search', 'search');
+
