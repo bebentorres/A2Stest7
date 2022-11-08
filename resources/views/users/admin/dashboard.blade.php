@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        Hello Admin!!
-        <br>
-        <a href="" class="btn btn-success">edit profile</a>
+        <div class="card p-3">
+            <h2>Hello Admin {{Auth::user()->name}}!</h2>
+        </div>
     </div>
 @endsection
