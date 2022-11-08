@@ -98,7 +98,7 @@
                         <a href="/employer/editprofile/update" class="btn btn-outline-success form-control mb-2">Update Profile</a>
                     @endif
                     <br>
-                    <a href="/employer/createpost" class="btn btn-success form-control">Create Job Post</a>
+                    <a href="/jobPosts/create" class="btn btn-success form-control">Create Job Post</a>
                 </div>
             </div>
             <div class="card" >
