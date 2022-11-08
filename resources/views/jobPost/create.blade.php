@@ -18,9 +18,9 @@
         <label style="font-weight: bold">Job Title</label>
         <input class="form-control" type="text" name="job_title">
         <br>
-        <label style="font-weight: bold">Company Number</label>
+        {{-- <label style="font-weight: bold">Company Number</label>
         <input class="form-control" type="text" name="cnum">
-        <br>
+        <br> --}}
         <label style="font-weight: bold">Job Description</label>
         <br>
         <textarea class="form-control" rows="10" cols="30" type="text" name="job_description">

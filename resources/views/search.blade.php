@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="card p-3">
+                <div class="card p-3 mb-2">
                     <h3>Engineer</h3>
                     <h4>Company XYZ</h4>
                     <p>National Capital Region <br>around PHP 30,000</p>
@@ -26,7 +26,30 @@
                         <a href="" style="width:100px"class="btn btn-outline-success me-2">Save</a>
                         <a href="" style="width:100px"class="btn btn-success">Apply Now</a>
                     </div>
-
+                </div>
+                <div class="card p-3 mb-2">
+                    <h3>Accountant</h3>
+                    <h4>Company XYZ</h4>
+                    <p>National Capital Region <br>around PHP 35,000</p>
+                    <h5>Min. 1 year exp</h5>
+                    <h5>Bachelor/College Degree in Accountancy</h5>
+                    <br>
+                    <div class="d-flex">
+                        <a href="" style="width:100px"class="btn btn-outline-success me-2">Save</a>
+                        <a href="" style="width:100px"class="btn btn-success">Apply Now</a>
+                    </div>
+                </div>
+                <div class="card p-3 mb-2">
+                    <h3>Admin Staff</h3>
+                    <h4>Company XYZ</h4>
+                    <p>National Capital Region <br>around PHP 20,000</p>
+                    <h5>Min. 1 year exp</h5>
+                    <h5>Bachelor/College Degree in Human Resources</h5>
+                    <br>
+                    <div class="d-flex">
+                        <a href="" style="width:100px"class="btn btn-outline-success me-2">Save</a>
+                        <a href="" style="width:100px"class="btn btn-success">Apply Now</a>
+                    </div>
                 </div>
             </div>
         </div>
