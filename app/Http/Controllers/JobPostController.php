@@ -19,6 +19,14 @@ class JobPostController extends Controller
         $jobPosts = JobPosts::all();
         $jobPosts = JobPosts::orderBy('job_id', 'asc')->simplePaginate(1);
         return view('jobPost.index')->with('jobPosts', $jobPosts);
+        //original code
+
+        //scout code
+        // $jobPosts = JobPosts::search(request(key: 'search'))->paginate();
+        // return view( view: 'users.index', compact( var_name: 'users'));
+        
+        
+        
         // return view('jobPost.index')->with('jobPosts', $jobPosts);
         
         // $jobPosts = JobPosts::orderBy('id', 'desc');

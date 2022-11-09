@@ -58,6 +58,5 @@ Route::view('/search', 'search');
 
 Route::resource('jobPosts', 'App\Http\Controllers\JobPostController');
 
-// Search page
-Route::view('/search', 'search');
+
 
